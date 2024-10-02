@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: Quicksand, Quicksand;
+    background-color: #282424; /* Dark background for contrast */
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Center the search container */
+    align-items: center; /* Align vertically */
+    height: 100vh; /* Full height of the viewport */
+}
+
+.search-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0px; /* Rounded corners */
+    padding: 14px; /* Padding inside the container */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    display: flex; /* Flexbox for layout */
+}
+
+#search-input {
+    padding: 12px; /* Padding for input */
+    border-radius: 0px; /* Rounded corners */
+    font-size: 1em; /* Font size */
+    width: 130px; /* Width of the input */
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    margin-right: 10px; /* Space between input and button */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+
+button {
+    padding: 12px 18px; /* Padding for the button */
+    border: none; /* Remove border */
+    border-radius: 0px; /* Rounded corners */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1em; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    #search-input {
+        width: 200px; /* Adjust width for smaller screens */
+    }
+}
+
