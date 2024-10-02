@@ -1,0 +1,112 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    font-family: Quicksand, sans-serif;
+    font-weight: 500;
+    background-color: #282424; /* Dark background */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align items */
+}
+
+/* Container Styles */
+.container {
+    text-align: center;
+    margin-top: 50px; /* Space from the top */
+}
+
+/* Header Styles */
+h1 {
+    font-size: 2.5em;
+    color: #fff; /* White color for the title */
+}
+
+/* Navigation Styles */
+nav {
+    margin-top: 20px; /* Space above the nav */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline; /* Display links in a row */
+    margin: 0 15px; /* Space between links */
+}
+
+nav a {
+    text-decoration: none;
+    color: #007bff; /* Link color */
+    font-size: 1.2em;
+}
+
+nav a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Floating Bar Styles */
+.floating-bar {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    background-color: rgba(9, 9, 9, 0.9); /* Semi-transparent background */
+    color: white; /* Text color */
+    padding: 10px; /* Padding around the bar */
+    display: flex;
+    align-items: center; /* Center icon and text vertically */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+/* Icon Styles */
+.icon {
+    width: 24px; /* Adjust icon size */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+/* Current Time Styles */
+#current-time {
+    font-size: 1.2em; /* Adjust text size */
+}
+
+/* Menu Styles */
+.menu {
+    display: none; /* Hide menu by default */
+    position: fixed;
+    bottom: 70px; /* Position above the floating bar */
+    left: 50%;
+    width: 14%;
+    transform: translateX(-50%); /* Center the menu */
+    background-color: rgba(9, 9, 9, 0.9);
+    border-radius: 0px; /* Slightly rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.menu.visible {
+    display: block; /* Show the menu when it has the 'visible' class */
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 10px; /* Padding inside the menu */
+    margin: 0;
+}
+
+.menu li {
+    margin: 5px 0; /* Space between menu items */
+}
+
+.menu a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Link color */
+}
+
+.menu a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+

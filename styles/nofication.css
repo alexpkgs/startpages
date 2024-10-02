@@ -1,0 +1,47 @@
+/* Notification Container */
+.notification {
+    position: fixed;
+    top: 20px; /* Distance from the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center the notification */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    color: white; /* Text color */
+    padding: 15px; /* Padding inside the notification */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    z-index: 1000; /* Ensure it stays on top */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
+    opacity: 0; /* Initially hidden */
+    transform: translate(-50%, -20px); /* Slightly shift up */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+}
+
+/* Visible State */
+.notification.visible {
+    opacity: 1; /* Make it fully visible */
+    transform: translate(-50%, 0); /* Move it to its original position */
+}
+
+/* Close Button */
+.notification .close {
+    background: transparent; /* Transparent background */
+    border: none; /* No border */
+    color: white; /* Text color */
+    cursor: pointer; /* Change cursor on hover */
+    margin-left: auto; /* Push the close button to the right */
+    font-size: 1.2em; /* Size of the close button */
+}
+
+/* Notification Message */
+.notification .message {
+    margin-right: 10px; /* Space between message and icon */
+}
+
+/* Icon Styles */
+.notification .icon {
+    width: 24px; /* Adjust icon size */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between icon and text */
+}
+
