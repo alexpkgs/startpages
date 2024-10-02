@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="./styles/style.css"> <!-- Link to your main CSS file -->
     <link rel="stylesheet" href="./styles/bar.css"> <!-- Link to your bar-specific CSS file -->
     <link rel="stylesheet" href="./styles/nofication.css">
+    <link rel="stylesheet" href="./styles/searchbar.css">
     <title>AwesomeWM</title>
 </head>
 <body>
-    <div class="container">
-        
+   
             </ul>
         </nav>
     </div>
@@ -112,7 +112,13 @@
             showNotification('Welcome');
         };
     </script>
-
+<div class="container">
+    <div class="search-container">
+        <form action="https://www.duckduckgo.com/" method="get">
+            <input type="text" id="search-input" name="q" placeholder="Hello There" />
+        </form>
+    </div>
+</div>
 
 </body>
 </html>
