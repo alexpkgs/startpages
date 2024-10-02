@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css"> <!-- Link to your main CSS file -->
+    <link rel="stylesheet" href="./styles/bar.css"> <!-- Link to your bar-specific CSS file -->
+    <link rel="stylesheet" href="./styles/nofication.css">
+    <title>AwesomeWM</title>
+</head>
+<body>
+    <div class="container">
+        
+            </ul>
+        </nav>
+    </div>
+
+    <div class="floating-bar">
+        <img src="./styles/awesome.png" alt="Icon" class="icon" onclick="toggleMenu()"> <!-- AwesomeWM icon -->
+        <span id="current-time">06:29 EST</span>
+    </div>
+
+ 
+
+    <div class="menu" id="menu">
+        <ul>
+            <li><a href="https://www.odysee.com" target="_blank">odysee</a></li>
+            <li><a href="https://www.git.gay" target="_blank">git.gay</a></li>
+            <!-- Add more links as needed -->
+        </ul>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('visible');
+        }
+
+        // Optional: Update the current time every minute
+        function updateTime() {
+            const timeElement = document.getElementById('current-time');
+            const now = new Date();
+            timeElement.innerText = now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}) + ' EST';
+        }
+
+        setInterval(updateTime, 60000); // Update every minute
+        updateTime(); // Initial call
+
+    </script>
+
+ <div class="container">
+     
+    </div>
+
+    <div class="notification" id="notification">
+        <img src="./styles/nofi.png" alt="i" class="icon"> <!-- Your icon source -->
+        <button class="close" onclick="closeNotification()">×</button>
+           <span class="message">you got mailed</span>
+    </div>
+
+
+   <script>
+        function showNotification(message) {
+            const notification = document.getElementById('notification');
+            const messageSpan = notification.querySelector('.message');
+            messageSpan.textContent = message;
+            notification.classList.add('visible');
+
+            // Automatically hide after 3 seconds
+            setTimeout(() => {
+                closeNotification();
+            }, 3000);
+        }
+
+        function closeNotification() {
+            const notification = document.getElementById('notification');
+            notification.classList.remove('visible');
+        }
+
+        // Show notification on page load
+        window.onload = function() {
+            showNotification('bwaa');
+        };
+    </script>
+
+  <div class="notification" id="notification">
+        <img src="./notification-icon.png" alt="Notification Icon" class="icon"> <!-- Your icon source -->
+        <button class="close" onclick="closeNotification()">×</button>
+        <span class="message">This is a notification message!</span>
+    </div>
+
+    <script>
+        function showNotification(message) {
+            const notification = document.getElementById('notification');
+            const messageSpan = notification.querySelector('.message');
+            messageSpan.textContent = message;
+            notification.classList.add('visible');
+
+            // Automatically hide after 3 seconds
+            setTimeout(() => {
+                closeNotification();
+            }, 3000);
+        }
+
+        function closeNotification() {
+            const notification = document.getElementById('notification');
+            notification.classList.remove('visible');
+        }
+
+        // Show notification on page load
+        window.onload = function() {
+            showNotification('Welcome');
+        };
+    </script>
+
+
+</body>
+</html>
+
